@@ -4,7 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "release": "bumpp --tag --commit --push"
+    "release": "bumpp --tag --commit --push",
+    "prettier": "prettier --write **/*.ts",
+    "build": "tsx index.ts"
+  },
+  "simple-git-hooks": {
+    "pre-push": "npm run prettier"
   },
   "repository": {
     "type": "git",
@@ -21,6 +26,13 @@
   },
   "homepage": "https://github.com/mzaini30/new#readme",
   "devDependencies": {
-    "bumpp": "^7.1.1"
+    "@types/node": "^18.0.0",
+    "bumpp": "^7.1.1",
+    "prettier": "^2.7.1"
+  },
+  "dependencies": {
+    "csvv": "^1.1.1",
+    "fast-glob": "^3.2.11",
+    "tsx": "^3.4.3"
   }
 }
