@@ -9,7 +9,7 @@
     "build": "tsx index.ts"
   },
   "simple-git-hooks": {
-    "pre-push": "npm run prettier"
+    "pre-commit": "npm run prettier"
   },
   "repository": {
     "type": "git",
