@@ -1,7 +1,7 @@
 import csvv from "csvv";
 import { sync } from "fast-glob";
 import { existsSync, mkdirSync, writeFileSync, readFileSync } from "fs";
-import template from './template'
+import template from "./template";
 
 const { stringify } = JSON;
 
@@ -10,7 +10,6 @@ if (!existsSync("dist")) {
 }
 
 let list = [];
-
 
 const semuaData = sync("data/*.txt");
 

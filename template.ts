@@ -1,4 +1,4 @@
-export default function(list): string{
+export default function (list): string {
   return `
   <!DOCTYPE html>
   <html lang="en">
@@ -14,13 +14,15 @@ export default function(list): string{
     <div class="p-5">
       <h1 class="text-center mb-4 font-bold uppercase">Kumpulan File JSON Jadwal Adzan</h1>
       <ol class="list-decimal ml-5">
-        ${list.map((x) => {
-          return `
+        ${list
+          .map((x) => {
+            return `
             <li class="mb-3">
               <a href="${x}.json" class="underline">${x}</a>
             </li>
           `;
-        }).join('')}
+          })
+          .join("")}
       </ol>
     </div>
   </body>
