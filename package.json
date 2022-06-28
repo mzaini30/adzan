@@ -4,12 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "release": "bumpp --tag --commit --push",
-    "prettier": "prettier --write **/*.ts",
-    "build": "tsx index.ts"
-  },
-  "simple-git-hooks": {
-    "pre-commit": "npm run prettier"
+    "dev": "tsx index.ts",
+    "pack": "tsx esbuild.ts",
+    "build": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -27,11 +24,8 @@
   "homepage": "https://github.com/mzaini30/new#readme",
   "devDependencies": {
     "@types/node": "^18.0.0",
-    "bumpp": "^7.1.1",
-    "prettier": "^2.7.1"
-  },
-  "dependencies": {
     "csvv": "^1.1.1",
+    "esbuild": "^0.14.47",
     "fast-glob": "^3.2.11",
     "tsx": "^3.4.3"
   }

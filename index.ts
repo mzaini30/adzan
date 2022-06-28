@@ -9,7 +9,7 @@ if (!existsSync("dist")) {
   mkdirSync("dist");
 }
 
-let list = [];
+let list: string[] = [];
 
 const semuaData = sync("data/*.txt");
 
@@ -22,4 +22,3 @@ for (const x of semuaData) {
 }
 
 writeFileSync("dist/index.html", template(list));
-// console.log(template(list))
